@@ -41,6 +41,8 @@ os.environ["trino_password"] = config["opensky"]["password"]
 
 # %%
 DESTINATION = "LFBO"
+START_DATE = datetime(year=2024, month=10, day=1)
+END_DATE = datetime(year=2024, month=11, day=6)
 
 ADSB_SCHEMA = list(adsb_schema.keys())
 WEATHER_COLUMNS = list(weather_schema.keys())
@@ -385,8 +387,8 @@ airports_df = (
     })
 )
 
-start_date = datetime(year=2024, month=10, day=1)
-end_date = datetime(year=2024, month=11, day=6)
+start_date = START_DATE
+end_date = END_DATE
 num_days = (end_date - start_date).days
 date_list = [
     start_date + timedelta(days=x)
