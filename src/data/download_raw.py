@@ -385,8 +385,8 @@ airports_df = (
     })
 )
 
-start_date = datetime(year=2024, month=11, day=6)
-end_date = datetime(year=2024, month=11, day=8)
+start_date = datetime(year=2024, month=10, day=1)
+end_date = datetime(year=2024, month=11, day=6)
 num_days = (end_date - start_date).days
 date_list = [
     start_date + timedelta(days=x)
